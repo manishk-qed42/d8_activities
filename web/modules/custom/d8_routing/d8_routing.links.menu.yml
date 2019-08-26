@@ -1,0 +1,5 @@
+d8_routing.admin:
+  title: 'D8 Routing Settings'
+  description: 'D8 Routing Settings'
+  parent: system.admin_config
+  route_name: d8_routing.static_content
