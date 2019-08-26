@@ -1,0 +1,11 @@
+d8_routing.tab_1:
+  route_name : d8_routing.static_content
+  title: Tab1
+  base_route: d8_routing.static_content
+  weight: 10
+
+d8_routing.tab_2:
+  route_name : d8_routing.arg_demo
+  title: Tab2
+  base_route: d8_routing.static_content
+  weight: 20
