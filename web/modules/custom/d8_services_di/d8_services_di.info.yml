@@ -1,0 +1,5 @@
+name: 'D8 Activity : Services & Dependency Injection (DI)'
+description: 'Drupal 8 Services, Dependency Injection & Dependency Injection Container(DIC)'
+package: d8 activities
+type: module
+core: 8.x

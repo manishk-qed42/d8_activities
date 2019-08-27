@@ -1,0 +1,6 @@
+d8_services_di.get_subscribers:
+  path: '/get-subscriber'
+  defaults:
+    _controller: Drupal\d8_services_di\Controller\ServiceDicController::getSubscribers
+  requirements:
+    _permission: 'access content'
