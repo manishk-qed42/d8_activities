@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Contains d8_services_di.module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+
+/*
+ * Implements hook_entity_insert().
+ */
+function d8_services_di_entity_insert(EntityInterface $entity) {
+	// Send email to subscriber when new article is created.
+	if ($entity->getEntityTypeId() == 'node' && $entity->get('type')->getString() == 'article') {
+		\Drupal::service('d8_services_di.subscriber_manager')->notifySubscribers();
+	}
+}

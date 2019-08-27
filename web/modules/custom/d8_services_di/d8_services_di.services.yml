@@ -1,0 +1,7 @@
+services:
+  d8_services_di.notifier:
+    class: Drupal\d8_services_di\Services\Notifier\Notifier
+
+  d8_services_di.subscriber_manager:
+    class: Drupal\d8_services_di\Services\Subscriber\SubscriberManager
+    arguments: ['@database', '@d8_services_di.notifier', '@string_translation']
