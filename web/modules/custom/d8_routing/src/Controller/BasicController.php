@@ -124,9 +124,8 @@ class BasicController extends ControllerBase {
     $routes['d8_routing.dynamic_route_node_details'] = new Route(
       '/dynamic-route/list/{node}',
       [
-        '_controller' => '\Drupal\d8_routing\Controller\BasicController::dynamicListingCallback',
-        '_title' => 'Dynamic Listing',
-        'arg' => 'node',
+        '_controller' => '\Drupal\d8_routing\Controller\BasicController::nodeDetailCallback',
+        '_title' => 'Node Detail',
       ],
       [
         '_permission' => 'access content',
@@ -136,8 +135,9 @@ class BasicController extends ControllerBase {
     $routes['d8_routing.dynamic_route_arg_demo'] = new Route(
       '/dynamic-route/arg-demo/{arg}',
       [
-        '_controller' => '\Drupal\d8_routing\Controller\BasicController::nodeDetailCallback',
-        '_title' => 'Node Detail',
+        '_controller' => '\Drupal\d8_routing\Controller\BasicController::dynamicListingCallback',
+        '_title' => 'Dynamic Listing',
+				'arg' => 'node',
       ],
       [
         '_permission' => 'access content',
