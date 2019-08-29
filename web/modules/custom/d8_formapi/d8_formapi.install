@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function d8_formapi_schema() {
+  $schema['d8_demo'] = [
+    'description' => 'The base table for Subscriber form data',
+    'fields' => [
+      'id' => [
+        'description' => 'The primary identifier.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'email' => [
+        'description' => 'Email of Subscriber',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'first_name' => [
+        'description' => 'First Name of Subscriber',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'last_name' => [
+        'description' => 'Last Name of Subscriber',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+    ],
+    'unique keys' => [
+			'id' => ['id'],
+		],
+		'primary key' => [
+			'id',
+		],
+  ];
+  return $schema;
+}
