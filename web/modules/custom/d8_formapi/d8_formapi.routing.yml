@@ -1,0 +1,32 @@
+d8_formapi.simple_form:
+  path: '/simple-form'
+  defaults:
+    _form: '\Drupal\d8_formapi\Form\SimpleForm'
+    _title: 'Simple Form'
+  requirements:
+    _access: 'TRUE'
+
+d8_formapi.dic_form:
+  path: '/dic-form'
+  defaults:
+    _form: '\Drupal\d8_formapi\Form\SubscriberForm'
+    _title: 'Subscribe Form'
+  requirements:
+    _access: 'TRUE'
+
+d8_formapi.state_demo_form:
+  path: '/state-demo-form'
+  defaults:
+    _form: '\Drupal\d8_formapi\Form\StateDemoForm'
+    _title: 'State Demo Form'
+  requirements:
+    _access: 'TRUE'
+
+d8_formapi.weather_config_form:
+  path: 'admin/weather-config'
+  defaults:
+    _form: '\Drupal\d8_formapi\Form\WeatherConfigForm'
+    _title: 'Weather Config Form'
+  requirements:
+    _access: 'TRUE'
+

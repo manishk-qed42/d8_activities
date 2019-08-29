@@ -1,0 +1,5 @@
+services:
+  d8_formapi.form_data_manager:
+    class: Drupal\d8_formapi\Services\Form\FormDataManager
+    arguments: ['@database']
+    

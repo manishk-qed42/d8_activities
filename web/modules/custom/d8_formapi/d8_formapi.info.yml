@@ -1,0 +1,5 @@
+name: 'D8 Activity : Form API'
+description: 'Drupal 8 Form API Activity'
+package: d8 activities
+type: module
+core: 8.x
