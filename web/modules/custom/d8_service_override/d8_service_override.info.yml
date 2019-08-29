@@ -1,0 +1,5 @@
+name: 'D8 Activity : Services Override'
+description: 'Overriding Services in Drupal 8 with ServiceProvideBase'
+package: d8 activities
+type: module
+core: 8.x
