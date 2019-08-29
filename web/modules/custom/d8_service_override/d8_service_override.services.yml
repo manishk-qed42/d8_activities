@@ -1,0 +1,5 @@
+services:
+  # Override user.auth service with custom service.
+  user.auth:
+    class: Drupal\d8_service_override\Services\User\UserAuthCustom
+    arguments: ['@entity_type.manager', '@password', '@database']
