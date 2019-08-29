@@ -110,6 +110,7 @@ class BasicController extends ControllerBase {
    * Dynamic routing callback.
    */
   public function routes() {
+    // Custom "access training content" permission.
     $routes['d8_routing.dynamic_route_static_content'] = new Route(
       '/dynamic-route/static-content',
       [
@@ -117,7 +118,7 @@ class BasicController extends ControllerBase {
         '_title' => 'Static Content Page',
       ],
       [
-        '_permission' => 'access content',
+        '_permission' => 'access training content',
       ]
     );
 
@@ -128,10 +129,11 @@ class BasicController extends ControllerBase {
         '_title' => 'Node Detail',
       ],
       [
-        '_permission' => 'access content',
+        '_custom_access' => '\Drupal\d8_permission\Controller\D8PermissionController::access',
       ]
     );
 
+    // Roles with {AND}.
     $routes['d8_routing.dynamic_route_arg_demo'] = new Route(
       '/dynamic-route/arg-demo/{arg}',
       [
@@ -140,7 +142,19 @@ class BasicController extends ControllerBase {
 				'arg' => 'node',
       ],
       [
-        '_permission' => 'access content',
+        '_role' => 'moderator,content_editor',
+      ]
+    );
+
+    // Roles with {OR}.
+    $routes['d8_routing.dynamic_route_static_content1'] = new Route(
+      '/dynamic-route/static-content1',
+      [
+        '_controller' => '\Drupal\d8_routing\Controller\BasicController::staticCallback',
+        '_title' => 'Static Content Page 1',
+      ],
+      [
+        '_role' => 'moderator+content_editor',
       ]
     );
 

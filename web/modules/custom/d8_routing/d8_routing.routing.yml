@@ -5,9 +5,10 @@ d8_routing.static_content:
     _controller: '\Drupal\d8_routing\Controller\BasicController:staticCallback'
     _title: 'Static Content Page'
   requirements:
-    _permission: 'access content'
+    _access: 'TRUE'
 
 # Basic Argument Routing.
+# Access when user is logged in.
 d8_routing.arg_demo:
   path: '/arg-demo/{arg}'
   defaults:
@@ -15,7 +16,7 @@ d8_routing.arg_demo:
     _title: 'Dynamic Listing'
     arg: 'node'
   requirements:
-    _permission: 'access content'
+    _user_is_logged_in: 'TRUE'
 
 # Entity Argument Routing (Add entity name as argument). 
 d8_routing.node_details:
@@ -24,7 +25,7 @@ d8_routing.node_details:
     _controller: '\Drupal\d8_routing\Controller\BasicController:nodeDetailCallback'
     _title: 'Node Detail'
   requirements:
-    _permission: 'access content'
+    _custom_access_check: 'TRUE'
 
 # Multiple Entity argument up-casted.
 d8_routing.nodes_details:

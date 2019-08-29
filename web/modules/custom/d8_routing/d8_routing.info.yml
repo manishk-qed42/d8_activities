@@ -3,3 +3,5 @@ description: 'Drupal 8 Routing Activity'
 package: d8 activities
 type: module
 core: 8.x
+dependencies:
+  - d8_permission
