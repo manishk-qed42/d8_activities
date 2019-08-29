@@ -2,7 +2,7 @@
 d8_routing.static_content:
   path: '/static-content'
   defaults:
-    _controller: 'Drupal\d8_routing\Controller\BasicController:staticCallback'
+    _controller: '\Drupal\d8_routing\Controller\BasicController:staticCallback'
     _title: 'Static Content Page'
   requirements:
     _permission: 'access content'
@@ -11,7 +11,7 @@ d8_routing.static_content:
 d8_routing.arg_demo:
   path: '/arg-demo/{arg}'
   defaults:
-    _controller: 'Drupal\d8_routing\Controller\BasicController:dynamicListingCallback'
+    _controller: '\Drupal\d8_routing\Controller\BasicController:dynamicListingCallback'
     _title: 'Dynamic Listing'
     arg: 'node'
   requirements:
@@ -21,7 +21,7 @@ d8_routing.arg_demo:
 d8_routing.node_details:
   path: '/list/{node}'
   defaults:
-    _controller: 'Drupal\d8_routing\Controller\BasicController:nodeDetailCallback'
+    _controller: '\Drupal\d8_routing\Controller\BasicController:nodeDetailCallback'
     _title: 'Node Detail'
   requirements:
     _permission: 'access content'
