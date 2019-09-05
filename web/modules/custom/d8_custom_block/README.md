@@ -15,3 +15,13 @@ Create a custom block to display weather data using data from http://api.openwea
 - Write a twig template to render the data collected above using <div> & <span> with appropriate classes.
 - Place the block at 2 different places with configuration for city name as: London & Mumbai.
 
+
+# Injecting JS & CSS in Drupal 8
+Activity
+Attaching Css & Js under different circumstances to Drupal 8.
+##### Steps
+- Case 1:
+  - Add CSS to render the block created in Custom Blocks in Drupal 8 with a border of 1 px & background-color: Blue.
+  - Add https://nnattawat.github.io/flip/ library & custom js to flip the blocks created.
+- Case 2:
+  - Add CSS to render a border on all the images appearing on your website.

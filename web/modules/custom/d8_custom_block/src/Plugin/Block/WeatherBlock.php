@@ -84,11 +84,11 @@ class  WeatherBlock extends BlockBase implements BlockPluginInterface, Container
 		if ($weather_data['status'] == 200) {
 			return [
 				'#theme' => 'weather-service',
-				// '#attached' => [
-				// 	// 'library' => [
-				// 	// 	'hoa/weather_block',
-				// 	// ],
-				// ],
+				'#attached' => [
+					'library' => [
+						'd8_custom_block/weather_block',
+					],
+				],
 				'#weather_data' => [
 					'city' => $city_name,
 					'temp_min' => $weather_data['main']['temp_min'],
