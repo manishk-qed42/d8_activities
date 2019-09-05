@@ -25,3 +25,11 @@ function d8_custom_block_theme($existing, $type, $theme, $path) {
 		],
   ];
 }
+
+/**
+ * Implements template_preprocess_page().
+ */
+function d8_custom_block_preprocess_page(&$variables) {
+	// Attach css to render a border on all the images appearing in website.
+	$variables['#attached']['library'][] = 'd8_custom_block/site_image';
+}
