@@ -1,0 +1,11 @@
+weather_block:
+  version: VERSION
+  css:
+    theme:
+      css/style.css: {}
+
+site_image:
+  version: VERSION
+  css:
+    theme:
+      css/site_image.css: {}
