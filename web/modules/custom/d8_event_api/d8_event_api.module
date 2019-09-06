@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ * Contains d8_event_api.module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\d8_event_api\Event\D8EventApiEvent;
+
+/**
+ * Implements hook_entity_insert().
+ */
+function d8_event_api_entity_insert(EntityInterface $entity) {
+  // Dispatch Custom Event (node.insert).
+	$dispatcher = \Drupal::service('event_dispatcher');
+	$event = new D8EventApiEvent($entity);
+	$dispatcher->dispatch(D8EventApiEvent::NODE_INSERT, $event);
+}

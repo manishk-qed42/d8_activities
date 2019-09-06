@@ -1,0 +1,11 @@
+services:
+  d8_event_api.d8_event_api_event_subscriber:
+    class: Drupal\d8_event_api\EventSubscriber\D8EventApiEventSubscriber
+    tags:
+      - { name: 'event_subscriber' }
+
+  d8_event_api.d8_event_api_custom_event_subscriber:
+    class: Drupal\d8_event_api\EventSubscriber\D8EventApiCustomSubscriber
+    arguments: ['@logger.factory']
+    tags:
+      - { name: 'event_subscriber' }
