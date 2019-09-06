@@ -25,3 +25,27 @@ Attaching Css & Js under different circumstances to Drupal 8.
   - Add https://nnattawat.github.io/flip/ library & custom js to flip the blocks created.
 - Case 2:
   - Add CSS to render a border on all the images appearing on your website.
+
+
+# Composer in D8 to autoload Libraries
+Activity
+Autoload PHP google books package with composer & use it to display the details of a book with isbn entered in the block config.
+##### Steps:
+- Create a custom block that takes isbn as a configuration.
+- Add composer.json to the custom module with 
+
+    ```composer require antoineaugusti/google-books```
+
+- Update merge plugin under composer.json in drupal root with 
+  ```
+  "merge-plugin": {
+    "include": [
+      "core/composer.json",
+      "modules/*/composer.json"
+    ],
+  ```
+
+- Run composer update from docroot
+- Use block's build function to pull data from google-books api using the PHP library added above.
+
+Source: https://www.drupal.org/node/2822349

@@ -2,3 +2,6 @@ services:
   d8_custom_block.weather_manager:
     class: Drupal\d8_custom_block\Services\Weather\WeatherManager
     arguments: ['@config.factory']
+
+  d8_custom_block.google_book_manager:
+    class: Drupal\d8_custom_block\Services\GoogleBook\GoogleBookManager

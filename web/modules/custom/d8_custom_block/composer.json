@@ -1,0 +1,9 @@
+{
+  "name": "antoineaugusti/google-books",
+  "description": "Simple Google Books API client",
+  "type": "library",
+  "require": {
+    "antoineaugusti/google-books": "^0.3.0"
+  },
+  "minimum-stability": "stable"
+}
