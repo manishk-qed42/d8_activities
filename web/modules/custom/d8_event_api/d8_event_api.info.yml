@@ -1,0 +1,5 @@
+name: 'D8 Activity : Event API'
+description: 'Event API in Drupal 8'
+type: module
+package: d8 activities
+core: 8.x 
