@@ -22,7 +22,15 @@ function d8_custom_block_theme($existing, $type, $theme, $path) {
           ],
         ],
       ],
-		],
+    ],
+    'latest-article' => [
+      'variables' => [
+        'block_data' => [
+          'currentUserEmail' => NULL,
+          'article_titles' => NULL,
+        ],
+      ],
+    ],
   ];
 }
 
