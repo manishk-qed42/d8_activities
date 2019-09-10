@@ -49,3 +49,18 @@ Autoload PHP google books package with composer & use it to display the details 
 - Use block's build function to pull data from google-books api using the PHP library added above.
 
 Source: https://www.drupal.org/node/2822349
+
+
+# Cache API in Drupal 8
+Activity
+Create a custom block displaying the title of last 3 articles created on the site as an item list. The block ouput should be cached to render the content & get invalidated automatically once the title for one of the nodes is updated.
+##### Steps:
+- Create a custom block to render the title of last 3 articles
+- Add #cache to it with the node ids of the articles being rendered
+
+
+# Cache API Extended: Cache contexts in Drupal 8
+Activity
+Extend the block created above to render email address of the current user.
+##### Steps:
+- Add cache context for current user to the block's build() function.
